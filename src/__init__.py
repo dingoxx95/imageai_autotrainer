@@ -17,7 +17,7 @@ MODEL_CONFIG = {
 }
 
 # Setup logging base
-default_logger = MLLogger()
+default_logger:MLLogger = MLLogger()
 
 # Funzione per cambiare il logger di default
 def set_logger(new_logger):
