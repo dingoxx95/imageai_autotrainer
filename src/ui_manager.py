@@ -77,8 +77,31 @@ class TrainingUI:
         self.info_text = tk.Text(self.info_frame, height=10, width=70)
         self.info_text.grid(row=0, column=0, padx=5, pady=5)
         
+        # Log console UI
+        self.log_frame = ttk.LabelFrame(self.main_frame, text="Live Log", padding="5")
+        self.log_frame.grid(row=3, column=0, sticky=(tk.W, tk.E))
+
+        self.log_text = tk.Text(self.log_frame, height=10, width=70)
+        self.log_text.grid(row=0, column=0, padx=5, pady=5)
+
+        scrollbar = ttk.Scrollbar(self.log_frame, command=self.log_text.yview)
+        scrollbar.grid(row=0, column=1, sticky='nsew')
+        self.log_text['yscrollcommand'] = scrollbar.set
+
+        # *** IMPORTANTE: Connetti il logger alla UI ***
+        default_logger.set_ui_log_callback(self.log_to_ui)
+        
         # Aggiorna display iniziale
         self.update_display()
+        
+    def log_to_ui(self, message: str):
+        """Scrive i log nella Text UI in modo sicuro per i thread."""
+        self.log_text.after(0, lambda: self._append_log_text(message))
+
+    def _append_log_text(self, message: str):
+        """Inserisce il messaggio nel widget di logging."""
+        self.log_text.insert(tk.END, message + "\n")
+        self.log_text.see(tk.END)
         
     def toggle_training(self):
         """Attiva/disattiva il training automatico"""
