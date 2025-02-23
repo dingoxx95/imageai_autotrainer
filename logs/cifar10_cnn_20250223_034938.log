@@ -1,0 +1,175 @@
+2025-02-23 03:49:40 - cifar10_cnn - INFO - Initializing ML components...
+2025-02-23 03:49:40 - cifar10_cnn - INFO - Dataset loaded successfully from data/cifar10_data.pkl
+2025-02-23 03:49:40 - cifar10_cnn - INFO - Dataset Info: {
+  "train_images_shape": [
+    50000,
+    32,
+    32,
+    3
+  ],
+  "test_images_shape": [
+    10000,
+    32,
+    32,
+    3
+  ],
+  "num_classes": 10,
+  "data_type": "float32",
+  "storage_path": "data/cifar10_data.pkl"
+}
+2025-02-23 03:49:47 - cifar10_cnn - INFO - Model loaded from models\model_20250223_034300
+2025-02-23 03:49:47 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_034300
+2025-02-23 03:49:47 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:49:47 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:50:11 - cifar10_cnn - INFO - Epoch 0: loss: 0.5827, accuracy: 0.7920, val_loss: 0.9456, val_accuracy: 0.6961
+2025-02-23 03:50:11 - cifar10_cnn - INFO - Epoch 1: loss: 0.5450, accuracy: 0.8073, val_loss: 0.9146, val_accuracy: 0.7049
+2025-02-23 03:50:11 - cifar10_cnn - INFO - Epoch 2: loss: 0.5118, accuracy: 0.8203, val_loss: 0.9791, val_accuracy: 0.6965
+2025-02-23 03:50:11 - cifar10_cnn - INFO - Epoch 3: loss: 0.4796, accuracy: 0.8282, val_loss: 0.9809, val_accuracy: 0.6955
+2025-02-23 03:50:11 - cifar10_cnn - INFO - Epoch 4: loss: 0.4535, accuracy: 0.8382, val_loss: 1.0002, val_accuracy: 0.6992
+2025-02-23 03:50:11 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:50:12 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9145663380622864,
+  "test_accuracy": 0.7049000263214111
+}
+2025-02-23 03:50:12 - cifar10_cnn - INFO - New best model! Accuracy improved from 0.7006 to 0.7049
+2025-02-23 03:50:12 - cifar10_cnn - INFO - Model loaded from models\model_20250223_034300
+2025-02-23 03:50:12 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_034300
+2025-02-23 03:50:12 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:50:12 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:50:35 - cifar10_cnn - INFO - Epoch 0: loss: 0.5800, accuracy: 0.7958, val_loss: 0.9325, val_accuracy: 0.6928
+2025-02-23 03:50:35 - cifar10_cnn - INFO - Epoch 1: loss: 0.5436, accuracy: 0.8070, val_loss: 0.9249, val_accuracy: 0.7002
+2025-02-23 03:50:35 - cifar10_cnn - INFO - Epoch 2: loss: 0.5137, accuracy: 0.8173, val_loss: 0.9688, val_accuracy: 0.6874
+2025-02-23 03:50:35 - cifar10_cnn - INFO - Epoch 3: loss: 0.4842, accuracy: 0.8268, val_loss: 0.9693, val_accuracy: 0.6992
+2025-02-23 03:50:35 - cifar10_cnn - INFO - Epoch 4: loss: 0.4499, accuracy: 0.8415, val_loss: 0.9927, val_accuracy: 0.7062
+2025-02-23 03:50:35 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:50:36 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.924934983253479,
+  "test_accuracy": 0.7002000212669373
+}
+2025-02-23 03:50:36 - cifar10_cnn - INFO - Model loaded from models\model_20250223_034300
+2025-02-23 03:50:36 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_034300
+2025-02-23 03:50:36 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:50:36 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:50:55 - cifar10_cnn - INFO - Epoch 0: loss: 0.5794, accuracy: 0.7988, val_loss: 0.8938, val_accuracy: 0.7055
+2025-02-23 03:50:55 - cifar10_cnn - INFO - Epoch 1: loss: 0.5431, accuracy: 0.8063, val_loss: 0.9118, val_accuracy: 0.7105
+2025-02-23 03:50:55 - cifar10_cnn - INFO - Epoch 2: loss: 0.5140, accuracy: 0.8178, val_loss: 0.9213, val_accuracy: 0.7096
+2025-02-23 03:50:55 - cifar10_cnn - INFO - Epoch 3: loss: 0.4862, accuracy: 0.8285, val_loss: 1.0273, val_accuracy: 0.6997
+2025-02-23 03:50:55 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:50:56 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.8938379883766174,
+  "test_accuracy": 0.7055000066757202
+}
+2025-02-23 03:50:56 - cifar10_cnn - INFO - New best model! Accuracy improved from 0.7049 to 0.7055
+2025-02-23 03:50:56 - cifar10_cnn - INFO - Model loaded from models\model_20250223_034300
+2025-02-23 03:50:56 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_034300
+2025-02-23 03:50:56 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:50:56 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:51:20 - cifar10_cnn - INFO - Epoch 0: loss: 0.5789, accuracy: 0.7949, val_loss: 0.9415, val_accuracy: 0.6986
+2025-02-23 03:51:20 - cifar10_cnn - INFO - Epoch 1: loss: 0.5448, accuracy: 0.8078, val_loss: 0.9323, val_accuracy: 0.7049
+2025-02-23 03:51:20 - cifar10_cnn - INFO - Epoch 2: loss: 0.5141, accuracy: 0.8170, val_loss: 0.9366, val_accuracy: 0.7021
+2025-02-23 03:51:20 - cifar10_cnn - INFO - Epoch 3: loss: 0.4857, accuracy: 0.8278, val_loss: 0.9567, val_accuracy: 0.7086
+2025-02-23 03:51:20 - cifar10_cnn - INFO - Epoch 4: loss: 0.4549, accuracy: 0.8381, val_loss: 1.0038, val_accuracy: 0.7006
+2025-02-23 03:51:20 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:51:21 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9322846531867981,
+  "test_accuracy": 0.7049000263214111
+}
+2025-02-23 03:51:21 - cifar10_cnn - INFO - Removed model model_20250223_034300 with accuracy 0.6917
+2025-02-23 03:51:21 - cifar10_cnn - INFO - Model loaded from models\model_20250223_035036
+2025-02-23 03:51:21 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_035036
+2025-02-23 03:51:21 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:51:21 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:51:39 - cifar10_cnn - INFO - Epoch 0: loss: 0.5165, accuracy: 0.8166, val_loss: 0.9808, val_accuracy: 0.6982
+2025-02-23 03:51:39 - cifar10_cnn - INFO - Epoch 1: loss: 0.4816, accuracy: 0.8307, val_loss: 0.9934, val_accuracy: 0.6942
+2025-02-23 03:51:39 - cifar10_cnn - INFO - Epoch 2: loss: 0.4523, accuracy: 0.8386, val_loss: 1.0283, val_accuracy: 0.6975
+2025-02-23 03:51:39 - cifar10_cnn - INFO - Epoch 3: loss: 0.4257, accuracy: 0.8483, val_loss: 1.0572, val_accuracy: 0.6883
+2025-02-23 03:51:39 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:51:40 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9807570576667786,
+  "test_accuracy": 0.698199987411499
+}
+2025-02-23 03:51:40 - cifar10_cnn - INFO - Removed model model_20250223_035140 with accuracy 0.6982
+2025-02-23 03:51:41 - cifar10_cnn - INFO - Model loaded from models\model_20250223_035036
+2025-02-23 03:51:41 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_035036
+2025-02-23 03:51:41 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:51:41 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:51:59 - cifar10_cnn - INFO - Epoch 0: loss: 0.5106, accuracy: 0.8191, val_loss: 0.9558, val_accuracy: 0.7040
+2025-02-23 03:51:59 - cifar10_cnn - INFO - Epoch 1: loss: 0.4822, accuracy: 0.8285, val_loss: 0.9731, val_accuracy: 0.7099
+2025-02-23 03:51:59 - cifar10_cnn - INFO - Epoch 2: loss: 0.4538, accuracy: 0.8372, val_loss: 1.0041, val_accuracy: 0.7005
+2025-02-23 03:51:59 - cifar10_cnn - INFO - Epoch 3: loss: 0.4215, accuracy: 0.8503, val_loss: 1.0227, val_accuracy: 0.7062
+2025-02-23 03:51:59 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:52:00 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.955772876739502,
+  "test_accuracy": 0.7039999961853027
+}
+2025-02-23 03:52:00 - cifar10_cnn - INFO - Removed model model_20250223_035036 with accuracy 0.7002
+2025-02-23 03:52:00 - cifar10_cnn - INFO - Model loaded from models\model_20250223_034335
+2025-02-23 03:52:00 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_034335
+2025-02-23 03:52:00 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:52:00 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:52:19 - cifar10_cnn - INFO - Epoch 0: loss: 0.5485, accuracy: 0.8049, val_loss: 0.9225, val_accuracy: 0.7041
+2025-02-23 03:52:19 - cifar10_cnn - INFO - Epoch 1: loss: 0.5122, accuracy: 0.8187, val_loss: 0.9311, val_accuracy: 0.7079
+2025-02-23 03:52:19 - cifar10_cnn - INFO - Epoch 2: loss: 0.4841, accuracy: 0.8295, val_loss: 0.9997, val_accuracy: 0.7054
+2025-02-23 03:52:19 - cifar10_cnn - INFO - Epoch 3: loss: 0.4537, accuracy: 0.8385, val_loss: 0.9879, val_accuracy: 0.6993
+2025-02-23 03:52:19 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:52:19 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9224934577941895,
+  "test_accuracy": 0.7041000127792358
+}
+2025-02-23 03:52:20 - cifar10_cnn - INFO - Removed model model_20250223_034335 with accuracy 0.7006
+2025-02-23 03:52:20 - cifar10_cnn - INFO - Model loaded from models\model_20250223_035200
+2025-02-23 03:52:20 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_035200
+2025-02-23 03:52:20 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:52:20 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:52:38 - cifar10_cnn - INFO - Epoch 0: loss: 0.4832, accuracy: 0.8291, val_loss: 0.9814, val_accuracy: 0.7027
+2025-02-23 03:52:38 - cifar10_cnn - INFO - Epoch 1: loss: 0.4496, accuracy: 0.8410, val_loss: 0.9989, val_accuracy: 0.7066
+2025-02-23 03:52:38 - cifar10_cnn - INFO - Epoch 2: loss: 0.4227, accuracy: 0.8491, val_loss: 1.0551, val_accuracy: 0.6976
+2025-02-23 03:52:38 - cifar10_cnn - INFO - Epoch 3: loss: 0.3925, accuracy: 0.8592, val_loss: 1.1023, val_accuracy: 0.6959
+2025-02-23 03:52:38 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:52:39 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9814100861549377,
+  "test_accuracy": 0.7027000188827515
+}
+2025-02-23 03:52:39 - cifar10_cnn - INFO - Removed model model_20250223_035239 with accuracy 0.7027
+2025-02-23 03:52:39 - cifar10_cnn - INFO - Model loaded from models\model_20250223_035200
+2025-02-23 03:52:39 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_035200
+2025-02-23 03:52:39 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:52:39 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:52:58 - cifar10_cnn - INFO - Epoch 0: loss: 0.4852, accuracy: 0.8276, val_loss: 0.9901, val_accuracy: 0.6988
+2025-02-23 03:52:58 - cifar10_cnn - INFO - Epoch 1: loss: 0.4461, accuracy: 0.8416, val_loss: 1.0151, val_accuracy: 0.6991
+2025-02-23 03:52:58 - cifar10_cnn - INFO - Epoch 2: loss: 0.4195, accuracy: 0.8511, val_loss: 1.0475, val_accuracy: 0.7022
+2025-02-23 03:52:58 - cifar10_cnn - INFO - Epoch 3: loss: 0.3959, accuracy: 0.8581, val_loss: 1.0900, val_accuracy: 0.6973
+2025-02-23 03:52:58 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:52:59 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9901140332221985,
+  "test_accuracy": 0.6988000273704529
+}
+2025-02-23 03:52:59 - cifar10_cnn - INFO - Removed model model_20250223_035259 with accuracy 0.6988
+2025-02-23 03:52:59 - cifar10_cnn - INFO - Model loaded from models\model_20250223_035200
+2025-02-23 03:52:59 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_035200
+2025-02-23 03:52:59 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:52:59 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:53:17 - cifar10_cnn - INFO - Epoch 0: loss: 0.4837, accuracy: 0.8289, val_loss: 0.9866, val_accuracy: 0.7050
+2025-02-23 03:53:17 - cifar10_cnn - INFO - Epoch 1: loss: 0.4452, accuracy: 0.8428, val_loss: 1.0595, val_accuracy: 0.7001
+2025-02-23 03:53:17 - cifar10_cnn - INFO - Epoch 2: loss: 0.4221, accuracy: 0.8496, val_loss: 1.0338, val_accuracy: 0.7062
+2025-02-23 03:53:17 - cifar10_cnn - INFO - Epoch 3: loss: 0.3928, accuracy: 0.8592, val_loss: 1.0843, val_accuracy: 0.7008
+2025-02-23 03:53:17 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:53:18 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9865990281105042,
+  "test_accuracy": 0.7049999833106995
+}
+2025-02-23 03:53:18 - cifar10_cnn - INFO - Removed model model_20250223_035200 with accuracy 0.7040
+2025-02-23 03:53:19 - cifar10_cnn - INFO - Model loaded from models\model_20250223_035219
+2025-02-23 03:53:19 - cifar10_cnn - INFO - Continuing training from model: models\model_20250223_035219
+2025-02-23 03:53:19 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:53:19 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:53:37 - cifar10_cnn - INFO - Epoch 0: loss: 0.5177, accuracy: 0.8160, val_loss: 0.9244, val_accuracy: 0.7044
+2025-02-23 03:53:37 - cifar10_cnn - INFO - Epoch 1: loss: 0.4865, accuracy: 0.8292, val_loss: 0.9389, val_accuracy: 0.7072
+2025-02-23 03:53:37 - cifar10_cnn - INFO - Epoch 2: loss: 0.4492, accuracy: 0.8398, val_loss: 0.9880, val_accuracy: 0.7028
+2025-02-23 03:53:37 - cifar10_cnn - INFO - Epoch 3: loss: 0.4227, accuracy: 0.8478, val_loss: 1.0682, val_accuracy: 0.6950
+2025-02-23 03:53:37 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:53:38 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9244068264961243,
+  "test_accuracy": 0.7044000029563904
+}
+2025-02-23 03:53:38 - cifar10_cnn - INFO - Removed model model_20250223_035219 with accuracy 0.7041

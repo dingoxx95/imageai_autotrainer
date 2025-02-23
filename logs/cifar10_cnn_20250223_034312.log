@@ -1,0 +1,85 @@
+2025-02-23 03:43:14 - cifar10_cnn - INFO - Starting application...
+2025-02-23 03:43:14 - cifar10_cnn - INFO - Setting up GPU...
+2025-02-23 03:43:15 - cifar10_cnn - INFO - GPU Configuration: {
+  "num_gpus": 1,
+  "cuda_available": true,
+  "compute_device": 0
+}
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Loading dataset...
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Dataset loaded successfully from data/cifar10_data.pkl
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Dataset Info: {
+  "train_images_shape": [
+    50000,
+    32,
+    32,
+    3
+  ],
+  "test_images_shape": [
+    10000,
+    32,
+    32,
+    3
+  ],
+  "num_classes": 10,
+  "data_type": "float32",
+  "storage_path": "data/cifar10_data.pkl"
+}
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Initializing model manager...
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Setting up model...
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Found existing model at models\model_20250223_034300
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Model loaded from models\model_20250223_034300
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Model Summary:
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d (Conv2D)             (None, 30, 30, 32)        896       
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 15, 15, 32)       0         
+ )                                                               
+                                                                 
+ conv2d_1 (Conv2D)           (None, 13, 13, 64)        18496     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 6, 6, 64)         0         
+ 2D)                                                             
+                                                                 
+ conv2d_2 (Conv2D)           (None, 4, 4, 64)          36928     
+                                                                 
+ flatten (Flatten)           (None, 1024)              0         
+                                                                 
+ dense (Dense)               (None, 64)                65600     
+                                                                 
+ dense_1 (Dense)             (None, 10)                650       
+                                                                 
+=================================================================
+Total params: 122,570
+Trainable params: 122,570
+Non-trainable params: 0
+_________________________________________________________________
+
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Starting training process...
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Starting training with batch_size=32, epochs=10
+2025-02-23 03:43:15 - cifar10_cnn - INFO - Checkpoint callback created: training_checkpoints/cp-{epoch:04d}.ckpt
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Epoch 0: loss: 0.5802, accuracy: 0.7960, val_loss: 0.9033, val_accuracy: 0.7006
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Epoch 1: loss: 0.5468, accuracy: 0.8056, val_loss: 0.9168, val_accuracy: 0.7041
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Epoch 2: loss: 0.5120, accuracy: 0.8195, val_loss: 0.9491, val_accuracy: 0.6981
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Epoch 3: loss: 0.4818, accuracy: 0.8304, val_loss: 0.9896, val_accuracy: 0.7009
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Evaluating model...
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Evaluating model on test set
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Evaluation metrics: {
+  "test_loss": 0.9033393263816833,
+  "test_accuracy": 0.7006000280380249
+}
+2025-02-23 03:43:35 - cifar10_cnn - INFO - Saving model...
+2025-02-23 03:43:36 - cifar10_cnn - INFO - New best model! Accuracy improved from 0.6917 to 0.7006
+2025-02-23 03:43:36 - cifar10_cnn - INFO - 
+Model Performance History:
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Model: model_20250223_034300, Accuracy: 0.6917, Date: 2025-02-23 03:43:01
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Model: model_20250223_034335, Accuracy: 0.7006, Date: 2025-02-23 03:43:36
+2025-02-23 03:43:36 - cifar10_cnn - INFO - 
+Best model accuracy: 0.7006
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Generating visualizations...
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Training history plot saved to training_history.png
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Made predictions for 5 images
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Predictions plot saved to predictions.png
+2025-02-23 03:43:36 - cifar10_cnn - INFO - Application completed successfully!

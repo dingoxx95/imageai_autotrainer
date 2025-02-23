@@ -1,0 +1,2 @@
+cifar10_data.pkl filter=lfs diff=lfs merge=lfs -text
+data/cifar10_data.pkl filter=lfs diff=lfs merge=lfs -text

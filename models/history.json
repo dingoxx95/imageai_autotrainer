@@ -1,0 +1,86 @@
+{
+  "models": [
+    {
+      "name": "model_20250223_035056",
+      "path": "models\\model_20250223_035056",
+      "accuracy": 0.7055000066757202,
+      "timestamp": "2025-02-23T03:50:56.350809",
+      "parameters": {
+        "INPUT_SHAPE": [
+          32,
+          32,
+          3
+        ],
+        "NUM_CLASSES": 10,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 10
+      }
+    },
+    {
+      "name": "model_20250223_035318",
+      "path": "models\\model_20250223_035318",
+      "accuracy": 0.7049999833106995,
+      "timestamp": "2025-02-23T03:53:18.836308",
+      "parameters": {
+        "INPUT_SHAPE": [
+          32,
+          32,
+          3
+        ],
+        "NUM_CLASSES": 10,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 10
+      }
+    },
+    {
+      "name": "model_20250223_035012",
+      "path": "models\\model_20250223_035012",
+      "accuracy": 0.7049000263214111,
+      "timestamp": "2025-02-23T03:50:12.486808",
+      "parameters": {
+        "INPUT_SHAPE": [
+          32,
+          32,
+          3
+        ],
+        "NUM_CLASSES": 10,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 10
+      }
+    },
+    {
+      "name": "model_20250223_035121",
+      "path": "models\\model_20250223_035121",
+      "accuracy": 0.7049000263214111,
+      "timestamp": "2025-02-23T03:51:21.371309",
+      "parameters": {
+        "INPUT_SHAPE": [
+          32,
+          32,
+          3
+        ],
+        "NUM_CLASSES": 10,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 10
+      }
+    },
+    {
+      "name": "model_20250223_035338",
+      "path": "models\\model_20250223_035338",
+      "accuracy": 0.7044000029563904,
+      "timestamp": "2025-02-23T03:53:38.843308",
+      "parameters": {
+        "INPUT_SHAPE": [
+          32,
+          32,
+          3
+        ],
+        "NUM_CLASSES": 10,
+        "BATCH_SIZE": 32,
+        "EPOCHS": 10
+      }
+    }
+  ],
+  "best_model": "model_20250223_035056",
+  "best_accuracy": 0.7055000066757202
+}
