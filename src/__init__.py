@@ -32,6 +32,7 @@ from .visualizer import Visualizer
 from .ml_logger import MLLogger
 from .model_manager import ModelManager
 from .ui_manager import TrainingUI
+from .training_orchestrator import TrainingOrchestrator
 
 __all__ = [
     'GPUConfig',
@@ -43,5 +44,6 @@ __all__ = [
     'ModelManager',
     'default_logger',
     'MODEL_CONFIG',
-    'TrainingUI'
+    'TrainingUI',
+    'TrainingOrchestrator'
 ]

@@ -8,16 +8,32 @@ from datetime import datetime
 import os
 from pathlib import Path
 
+class UIHandler(logging.Handler):
+    """Handler di logging che inoltra i log alla UI tramite callback."""
+    def __init__(self, callback: Callable[[str], None]):
+        super().__init__()
+        self.callback = callback
+
+    def emit(self, record: logging.LogRecord):
+        """Invia il log alla UI in modo thread-safe."""
+        log_entry = self.format(record)
+        if self.callback:
+            try:
+                self.callback(log_entry)
+            except Exception:
+                pass  # Evita crash se la UI non è attiva
+
+
 @dataclass(slots=True)
 class MLLogger:
     log_dir: Path = field(default_factory=lambda: Path("logs"))
     model_name: str = "cifar10_cnn"
     file_handler: Optional[logging.FileHandler] = None
     console_handler: Optional[logging.StreamHandler] = None
+    ui_handler: Optional[UIHandler] = None
     metrics_file: Optional[Path] = None
     _logger: Optional[logging.Logger] = None
     ui_log_callback: Optional[Callable[[str], None]] = None
-    ui_handler: Optional[logging.Handler] = None
     
     def __post_init__(self):
         # Crea directory dei log se non esiste
@@ -48,15 +64,15 @@ class MLLogger:
         self.metrics_file = self.log_dir / f"{self.model_name}_metrics.jsonl"
     
     def set_ui_log_callback(self, callback: Callable[[str], None]):
-        """Assegna una funzione di callback che aggiorna la UI con i log."""
+        """Collega il logger alla UI per la visualizzazione live."""
         self.ui_log_callback = callback
-        
-        # Se esiste un handler per la UI, lo rimuoviamo prima di aggiungerne uno nuovo
+
+        # Rimuovi l'eventuale handler UI precedente
         if self.ui_handler:
             self._logger.removeHandler(self.ui_handler)
 
-        # Creiamo un handler per la UI che intercetta tutti i log
-        self.ui_handler = logging.StreamHandler(UIStream(callback))
+        # Crea un nuovo handler per la UI
+        self.ui_handler = UIHandler(callback)
         self.ui_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
         self._logger.addHandler(self.ui_handler)
         
@@ -77,7 +93,7 @@ class MLLogger:
         self._logger.info(f"Model Architecture:\n{json.dumps(model_info, indent=2)}")
 
     def log_training_step(self, epoch: int, metrics: Dict[str, float]) -> None:
-        """Logga metriche di training per ogni epoca"""
+        """Logga metriche di training."""
         metrics_str = ", ".join(f"{k}: {v:.4f}" for k, v in metrics.items())
         self._logger.info(f"Epoch {epoch}: {metrics_str}")
 
@@ -92,32 +108,21 @@ class MLLogger:
         self._logger.info(f"Dataset Info: {json.dumps(dataset_info, indent=2)}")
 
     def log_error(self, error: Exception, context: str = ""):
-        """Logga errori con contesto"""
-        self._logger.error(f"Error in {context}: {str(error)}", exc_info=True)
+        """Logga un errore con contesto."""
+        err_msg = f"[ERROR] {context}: {str(error)}"
+        self._logger.error(err_msg, exc_info=True)
 
     def log_checkpoint(self, checkpoint_path: str) -> None:
         """Logga salvataggio checkpoint"""
         self._logger.info(f"Checkpoint saved: {checkpoint_path}")
 
     def close(self) -> None:
-        """Chiude i file handler"""
+        """Chiude i file handler."""
         if self.file_handler:
             self.file_handler.close()
             self._logger.removeHandler(self.file_handler)
         if self.console_handler:
             self.console_handler.close()
             self._logger.removeHandler(self.console_handler)
-            
-class UIStream:
-    """Classe che inoltra i log a una funzione di callback per la UI"""
-    def __init__(self, callback: Callable[[str], None]):
-        self.callback = callback
-
-    def write(self, message: str):
-        """Scrive il log nella UI"""
-        if self.callback and message.strip():
-            self.callback(message.strip())
-
-    def flush(self):
-        """Metodo necessario per compatibilità con logging.StreamHandler"""
-        pass
+        if self.ui_handler:
+            self._logger.removeHandler(self.ui_handler)
